@@ -10,7 +10,7 @@ namespace SSAApp.Web.Infraestructure.Repositories
     {
         public TEntity Add(TEntity entity)
         {
-            using (var context = new ssaappContext())
+            using (var context = new SSAAppContext())
             {
                 context.Entry(entity).State = EntityState.Added;
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace SSAApp.Web.Infraestructure.Repositories
 
         public TEntity Delete(int id)
         {
-            using (var context = new ssaappContext())
+            using (var context = new SSAAppContext())
             {
                 var entity = context.Server.FirstOrDefaultAsync(x => x.IdServer == id).Result;
                 if (entity != null)
@@ -39,7 +39,7 @@ namespace SSAApp.Web.Infraestructure.Repositories
 
         public IEnumerable<TEntity> GetAll()
         {
-            using (var context = new ssaappContext())
+            using (var context = new SSAAppContext())
             {
                 var entity = context.Server.ToListAsync().Result;
                 return entity as IEnumerable<TEntity>;
@@ -48,7 +48,7 @@ namespace SSAApp.Web.Infraestructure.Repositories
 
         public TEntity GetById(int id)
         {
-            using (var context = new ssaappContext())
+            using (var context = new SSAAppContext())
             {
                 var entity = context.Server.FirstAsync(x => x.IdServer == id).Result;
                 return entity as TEntity;
@@ -57,7 +57,7 @@ namespace SSAApp.Web.Infraestructure.Repositories
 
         public TEntity Modify(TEntity entity)
         {
-            using (var context = new ssaappContext())
+            using (var context = new SSAAppContext())
             {
                 context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
