@@ -41,12 +41,15 @@ namespace SSAApp.Web
 
             // Capa de aplicacion
             services.AddSingleton<IServerAppService, ServerAppService>();
+            services.AddSingleton<IServerStatusAppService, ServerStatusAppService>();
 
             // Capa de dominio
             services.AddSingleton<IServerService, ServerService>();
+            services.AddSingleton<IServerStatusService, ServerStatusService>();
 
             // Capa de infraestructura
             services.AddSingleton<IServerRepository, ServerRepository>();
+            services.AddSingleton<IServerStatusRepository, ServerStatusRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

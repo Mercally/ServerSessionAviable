@@ -36,6 +36,13 @@ namespace SSAApp.Web.Infraestructure
                 entity.Property(e => e.IdServer).UseIdentityAlwaysColumn();
             });
 
+            modelBuilder.Entity<ServerStatus>(entity =>
+            {
+                entity.ToTable("ServerStatus", "private");
+                entity.HasKey(e => e.IdServerStatus);
+                entity.Property(e => e.IdServerStatus).UseIdentityAlwaysColumn();
+            });
+
             OnModelCreatingPartial(modelBuilder);
         }
 
