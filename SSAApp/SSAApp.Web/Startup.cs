@@ -11,14 +11,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SSAApp.Web.Domain.Core;
-using SSAApp.Web.Domain.Entities;
 using SSAApp.Web.Domain.Interfaces.Repositories;
 using SSAApp.Web.Domain.Interfaces.Services;
-using SSAApp.Web.Infraestructure;
 using SSAApp.Web.Infraestructure.Repositories;
-using SSAApp.Web.Interfaces;
-using SSAApp.Web.Services;
 using Microsoft.OpenApi.Models;
+using SSAApp.Web.Services.Interfaces;
+using SSAApp.Web.Services.Services;
 
 namespace SSAApp.Web
 {

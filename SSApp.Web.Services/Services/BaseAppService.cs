@@ -1,11 +1,11 @@
 ﻿using SSAApp.Web.Domain.Interfaces.Services;
-using SSAApp.Web.Interfaces;
+using SSAApp.Web.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SSAApp.Web.Services
+namespace SSAApp.Web.Services.Services
 {
     public class BaseAppService<TEntity> : IDisposable, IBaseAppService<TEntity> where TEntity : class
     {

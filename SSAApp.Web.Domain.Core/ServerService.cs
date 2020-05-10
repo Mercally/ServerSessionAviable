@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SSAApp.Web.Domain.Core
 {
-    public class ServerService : BaseService<Server>, IServerService
+    public class ServerService : BaseService<ServerModel>, IServerService
     {
         private readonly IServerRepository serverRepository;
 

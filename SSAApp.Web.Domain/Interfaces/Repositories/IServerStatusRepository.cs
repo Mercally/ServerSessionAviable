@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SSAApp.Web.Domain.Interfaces.Repositories
 {
-    public interface IServerStatusRepository : IBaseRepository<ServerStatus>
+    public interface IServerStatusRepository : IBaseRepository<ServerStatusModel>
     {
     }
 }

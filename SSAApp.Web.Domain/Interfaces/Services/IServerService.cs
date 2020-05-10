@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SSAApp.Web.Domain.Interfaces.Services
 {
-    public interface IServerService : IBaseService<Server>
+    public interface IServerService : IBaseService<ServerModel>
     {
     }
 }

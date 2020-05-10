@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SSAApp.Web.Domain.Entities;
-using SSAApp.Web.Interfaces;
+using SSAApp.Web.Services.Interfaces;
 
 namespace SSAApp.Web.Controllers
 {
@@ -22,7 +22,7 @@ namespace SSAApp.Web.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<IEnumerable<ServerStatus>> List()
+        public ActionResult<IEnumerable<ServerStatusModel>> List()
         {
             return Ok(app.GetAll());
         }
@@ -30,7 +30,7 @@ namespace SSAApp.Web.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<ServerStatus> GetItem(int id)
+        public ActionResult<ServerStatusModel> GetItem(int id)
         {
             var model = app.GetById(id);
 
@@ -43,7 +43,7 @@ namespace SSAApp.Web.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<ServerStatus> Create([FromBody]ServerStatus model)
+        public ActionResult<ServerStatusModel> Create([FromBody]ServerStatusModel model)
         {
             app.Add(model);
             return CreatedAtAction(nameof(GetItem), new { model.IdServer }, model);
@@ -52,7 +52,7 @@ namespace SSAApp.Web.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult Edit([FromBody] ServerStatus item)
+        public ActionResult Edit([FromBody] ServerStatusModel item)
         {
             try
             {

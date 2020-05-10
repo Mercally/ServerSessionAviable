@@ -17,7 +17,7 @@ namespace SSAApp.Web.Infraestructure
 
         }
 
-        public virtual DbSet<Server> Server { get; set; }
+        public virtual DbSet<ServerModel> Server { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,14 +29,14 @@ namespace SSAApp.Web.Infraestructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Server>(entity =>
+            modelBuilder.Entity<ServerModel>(entity =>
             {
                 entity.ToTable("Server", "private");
                 entity.HasKey(e => e.IdServer);
                 entity.Property(e => e.IdServer).UseIdentityAlwaysColumn();
             });
 
-            modelBuilder.Entity<ServerStatus>(entity =>
+            modelBuilder.Entity<ServerStatusModel>(entity =>
             {
                 entity.ToTable("ServerStatus", "private");
                 entity.HasKey(e => e.IdServerStatus);

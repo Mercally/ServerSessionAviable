@@ -17,15 +17,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAApp.Web.Domain", "SSAApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAApp.Web.UnitTests", "SSAApp.Web.UnitTests\SSAApp.Web.UnitTests.csproj", "{E7AAD890-14BF-490E-8538-AAEBAC68FAD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSAApp.Web.Domain.Core", "SSAApp.Web.Domain.Core\SSAApp.Web.Domain.Core.csproj", "{4397DFBF-B495-44BD-BC3A-052A682052ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAApp.Web.Domain.Core", "SSAApp.Web.Domain.Core\SSAApp.Web.Domain.Core.csproj", "{4397DFBF-B495-44BD-BC3A-052A682052ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSAApp.Web.Domain.Entities", "SSAApp.Web.Domain.Entities\SSAApp.Web.Domain.Entities.csproj", "{D26D9A6F-851F-49B4-9B6D-0F491967FB6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAApp.Web.Domain.Entities", "SSAApp.Web.Domain.Entities\SSAApp.Web.Domain.Entities.csproj", "{D26D9A6F-851F-49B4-9B6D-0F491967FB6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSAApp.Web.Infraestructure", "SSAApp.Web.Infraestructure\SSAApp.Web.Infraestructure.csproj", "{F66E2D9C-5627-425F-AB7E-64D399AECBD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAApp.Web.Infraestructure", "SSAApp.Web.Infraestructure\SSAApp.Web.Infraestructure.csproj", "{F66E2D9C-5627-425F-AB7E-64D399AECBD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{156035A8-71BF-40AD-B624-3864608A6B25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APP", "APP", "{291647BB-1A71-4C52-915D-AC69A2746A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSAApp.Web.Services", "SSApp.Web.Services\SSAApp.Web.Services.csproj", "{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -287,6 +289,30 @@ Global
 		{F66E2D9C-5627-425F-AB7E-64D399AECBD6}.Release|x64.Build.0 = Release|Any CPU
 		{F66E2D9C-5627-425F-AB7E-64D399AECBD6}.Release|x86.ActiveCfg = Release|Any CPU
 		{F66E2D9C-5627-425F-AB7E-64D399AECBD6}.Release|x86.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|x64.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|ARM.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|iPhone.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|x64.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|x64.Build.0 = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -301,6 +327,7 @@ Global
 		{4397DFBF-B495-44BD-BC3A-052A682052ED} = {156035A8-71BF-40AD-B624-3864608A6B25}
 		{D26D9A6F-851F-49B4-9B6D-0F491967FB6D} = {156035A8-71BF-40AD-B624-3864608A6B25}
 		{F66E2D9C-5627-425F-AB7E-64D399AECBD6} = {156035A8-71BF-40AD-B624-3864608A6B25}
+		{F58A6E5E-BC9A-4D28-BCCC-2A1681CE81F2} = {156035A8-71BF-40AD-B624-3864608A6B25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {569024AD-D298-48D0-A99E-436BE880520E}

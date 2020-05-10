@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SSAApp.Web.Domain.Entities
 {
-    public class ServerStatus
+    public class ServerStatusModel
     {
         public long IdServerStatus { get; set; }
         public int IdServer { get; set; }

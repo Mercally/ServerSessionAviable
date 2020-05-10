@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SSAApp.Web.Infraestructure.Repositories
 {
-    public class ServerRepository : BaseRepository<Server>, IServerRepository
+    public class ServerRepository : BaseRepository<ServerModel>, IServerRepository
     {
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SSAApp.Web.Interfaces
+namespace SSAApp.Web.Services.Interfaces
 {
     public interface IBaseAppService<TEntity> where TEntity : class
     {

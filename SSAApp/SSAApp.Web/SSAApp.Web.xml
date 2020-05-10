@@ -9,11 +9,11 @@
             Controlador de operaciones con entidad de servidores.
             </summary>
         </member>
-        <member name="M:SSAApp.Web.Controllers.ServersController.#ctor(SSAApp.Web.Interfaces.IServerAppService)">
+        <member name="M:SSAApp.Web.Controllers.ServersController.#ctor(SSAApp.Web.Services.Interfaces.IServerAppService)">
             <summary>
             Constructor por defecto.
             </summary>
-            <param name="app"></param>
+            <param name="api"></param>
         </member>
         <member name="M:SSAApp.Web.Controllers.ServersController.List">
             <summary>
@@ -28,14 +28,14 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:SSAApp.Web.Controllers.ServersController.Create(SSAApp.Web.Domain.Entities.Server)">
+        <member name="M:SSAApp.Web.Controllers.ServersController.Create(SSAApp.Web.Domain.Entities.ServerModel)">
             <summary>
             Crear una nueva entidad de servidor.
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:SSAApp.Web.Controllers.ServersController.Edit(SSAApp.Web.Domain.Entities.Server)">
+        <member name="M:SSAApp.Web.Controllers.ServersController.Edit(SSAApp.Web.Domain.Entities.ServerModel)">
             <summary>
             Editar una entidad de servidor existentes.
             </summary>

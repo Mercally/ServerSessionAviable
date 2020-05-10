@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SSAApp.Web.Domain.Entities
 {
-    public class Server
+    public class ServerModel
     {
         public int IdServer { get; set; }
         public string DNS { get; set; }

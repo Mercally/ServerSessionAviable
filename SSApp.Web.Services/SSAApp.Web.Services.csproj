@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SSAApp.Web.Domain.Entities\SSAApp.Web.Domain.Entities.csproj" />
+    <ProjectReference Include="..\SSAApp.Web.Domain\SSAApp.Web.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
