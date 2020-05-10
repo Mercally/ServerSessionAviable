@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,7 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using SSAApp.Models;
 using SSAApp.Web.Domain.Core;
 using SSAApp.Web.Domain.Entities;
 using SSAApp.Web.Domain.Interfaces.Repositories;
@@ -18,26 +18,47 @@ using SSAApp.Web.Infraestructure;
 using SSAApp.Web.Infraestructure.Repositories;
 using SSAApp.Web.Interfaces;
 using SSAApp.Web.Services;
-//using SSAApp.Web.Infraestructure.
+using Microsoft.OpenApi.Models;
 
 namespace SSAApp.Web
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string xmlPath = Path.Combine(basePath, "SSAApp.Web.xml");
+
             services.AddControllers();
-            services.AddSingleton<IItemRepository, ItemRepository>();
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc(name: "v1", new OpenApiInfo() { Title = "SSAApp API", Version = "v1" });
+                c.IncludeXmlComments(xmlPath);
+            });
+
+            services.AddSwaggerGenNewtonsoftSupport();
 
             // Capa de aplicacion
             services.AddSingleton<IServerAppService, ServerAppService>();
@@ -52,6 +73,11 @@ namespace SSAApp.Web
             services.AddSingleton<IServerStatusRepository, ServerStatusRepository>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -59,12 +85,22 @@ namespace SSAApp.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint(url: "/swagger/v1/swagger.json", name: "SSAApp Api v1");
+                //c.RoutePrefix = string.Empty;
+            });
+
             app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "defaultv1",
+                    pattern: "api/v1/{controller}/{id?}",
+                    defaults: "api/v1/Status/");
             });
         }
     }

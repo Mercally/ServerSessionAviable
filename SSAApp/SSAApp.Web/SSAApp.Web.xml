@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SSAApp.Web</name>
+    </assembly>
+    <members>
+        <member name="T:SSAApp.Web.Controllers.ServersController">
+            <summary>
+            Controlador de operaciones con entidad de servidores.
+            </summary>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.#ctor(SSAApp.Web.Interfaces.IServerAppService)">
+            <summary>
+            Constructor por defecto.
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.List">
+            <summary>
+            Listar todos los servidores.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.GetItem(System.Int32)">
+            <summary>
+            Obtener un servidor por su ID.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.Create(SSAApp.Web.Domain.Entities.Server)">
+            <summary>
+            Crear una nueva entidad de servidor.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.Edit(SSAApp.Web.Domain.Entities.Server)">
+            <summary>
+            Editar una entidad de servidor existentes.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSAApp.Web.Controllers.ServersController.Delete(System.Int32)">
+            <summary>
+            Elimina un servidor por su ID.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSAApp.Web.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SSAApp.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:SSAApp.Web.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SSAApp.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:SSAApp.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

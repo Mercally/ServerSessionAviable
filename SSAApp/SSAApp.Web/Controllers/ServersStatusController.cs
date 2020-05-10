@@ -9,14 +9,14 @@ using SSAApp.Web.Interfaces;
 
 namespace SSAApp.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ServersStatusController : ControllerBase
     {
         private readonly IServerStatusAppService app;
 
         public ServersStatusController(IServerStatusAppService app)
-        { 
+        {
             this.app = app;
         }
 
